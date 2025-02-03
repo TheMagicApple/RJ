@@ -343,8 +343,10 @@ async function waitForPlayer2(){
     }
 }
 
-document.addEventListener('keydown', function(event) {
+document.addEventListener('keydown', async function(event) {
   if (event.key === 'Enter' && gameOver) {
+      await cb.setProperty("here", "player1", false);
+      await cb.setProperty("here", "player2", false);
       window.location.href = "index.html";
   }
 });
