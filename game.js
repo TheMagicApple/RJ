@@ -345,8 +345,8 @@ async function waitForPlayer2(){
 
 document.addEventListener('keydown', async function(event) {
   if (event.key === 'Enter' && gameOver) {
-      await cb.setProperty("here", "player1", false);
-      await cb.setProperty("here", "player2", false);
+      await cb.setProperty("here", false, "player1", "match");
+      await cb.setProperty("here", false, "player2", "match");
       window.location.href = "index.html";
   }
 });
