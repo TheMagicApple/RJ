@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>RJ</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <canvas id = "canvas"></canvas>
+    <div id = "youWin"></div>
+    <div id = "game">
+        <div id = "youName"></div>
+        <div id = "youHPBorder"></div>
+        <div id = "youHP"></div>
+        <div id = "youEdge"></div>
+        <div id = "youMultiplier"></div>
+        <div id = "youLuck"></div>
+        <div id = "enemyName"></div>
+        <div id = "enemyHPBorder"></div>
+        <div id = "enemyHP"></div>
+        <div id = "enemyEdge"></div>
+        <div id = "enemyMultiplier"></div>
+        <div id = "enemyLuck"></div>
+        <div id = "enemyThinking"></div>
+        <button class = "card" style = "left:3%" onclick = "async() => {
+          await move(0);
+        };">
+            <div class = "cardTitle"></div>
+            <div class = "cardDescription"></div>
+        </button>
+        <button class = "card" style = "left:35%" onclick = "await move(1)">
+            <div class = "cardTitle"></div>
+            <div class = "cardDescription"></div>
+        </button>
+        <button class = "card" style = "left:67%" onclick = "await move(2)">
+            <div class = "cardTitle"></div>
+            <div class = "cardDescription"></div>
+        </button>
+    </div>
+    <div id = "lost" style = "display:none;opacity:0">
+        <div id = "youLost"></div>
+    </div>
+    <script type = "module" src="game.js"></script>
+  </body>
+</html>

@@ -1,0 +1,332 @@
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+IN:wght@100..400&display=swap');
+body{
+    font-family: "Instrument Sans", serif;
+    overflow-x:hidden;
+    overflow-y:hidden;
+    /* Note: 17px = 1vw (monitor)*/
+}
+#logo{
+    font-family: "Playwrite IN", serif;
+    position:absolute;
+    left:5%;
+    top:5%;
+    font-size:2vw;
+}
+#xpBarRank{
+    position:absolute;
+    left:30%;
+    font-size:2vw;
+    top:22%;
+}
+#xpBar{
+    position:absolute;
+    width:20%;
+    left:30%;
+    height:calc(5% + 0.12vw);
+    top:30%;
+    background-color:black;
+}
+#xpBarBorder{
+    position:absolute;
+    width:40%;
+    left:30%;
+    height:5%;
+    top:30%;
+    border:0.12vw solid black;
+}
+#yourName{
+    position:absolute;
+    width:16%;
+    left:38%;
+    top:45%;
+    height:7%;
+    font-size:1.5vw;
+    border:1px solid rgb(220,220,220);
+    text-align:center;
+    border-radius:0.7vw;
+    font-family: "Instrument Sans", serif;
+}
+#yourName:focus{
+    outline:none;
+}
+#saveName{
+    position:absolute;
+    left:56%;
+    width:5%;
+    font-family: "Instrument Sans", serif;
+    background-color:rgb(241,241,241);
+    border:1px solid rgb(230,230,230);
+    transition:0.2s all;
+    border-radius:5vw;
+    height:7.5%;
+    top:45%;
+    font-size:1vw;
+}
+#saveName:hover{
+    cursor:pointer;
+    transform:translateY(-0.4vw);
+}
+#saveName:active{
+    background-color:rgb(220,220,220);
+}
+#queue{
+    position:absolute;
+    left:43.5%;
+    width:13%;
+    top:65%;
+    height:9%;
+    background-color:rgb(241,241,241);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:1.7vw;
+    font-family: "Instrument Sans", serif;
+    border:none;
+    border-radius:5vw;
+    transition:0.2s all;
+    border:1px solid rgb(230,230,230);
+}
+#queue:hover{
+    transform:translateY(-1vw);
+    cursor:pointer;
+}
+#youWin{
+    position:absolute;
+    left:0%;
+    width:100%;
+    text-align:center;
+    color:red;
+    text-shadow:0 0 0.06vw red;
+    font-weight:700;
+    font-size:2.94vw;
+    top:35%;
+}
+#youLost{
+    position:absolute;
+    left:0%;
+    width:100%;
+    text-align:center;
+    color:red;
+    text-shadow:0 0 0.06vw red;
+    font-weight:700;
+    font-size:2.94vw;
+    top:35%;
+}
+#rematch{
+    position:absolute;
+    left:40%;
+    width:20%;
+    top:60%;
+    height:10%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:red;
+    text-shadow:0 0 0.06vw red;
+    font-size:2.06vw;
+    background:none;
+    border:0.12vw solid red;
+    font-family: "Instrument Sans", serif;
+    border-radius:2.94vw;
+    box-shadow:0 0 0.06vw 0.06vw red;
+    transition:0.2s transform;
+}
+#rematch:hover{
+    transform:translateY(-1vw);
+    cursor:pointer;
+}
+#lost{
+    position:absolute;
+    left:0%;
+    top:0%;
+    width:100%;
+    height:100%;
+    background-color:rgb(18,18,18);
+    transition:1s opacity,1s display;
+}
+#game{
+    position:absolute;
+    left:0%;
+    top:0%;
+    width:100%;
+    height:100%;
+    background-color:rgb(250,250,250);
+    display:none;
+    transition:1s opacity;
+}
+#youName{
+    position:absolute;
+    left:3%;
+    top:3%;
+    font-size:2.35vw;
+    font-weight:700;
+}
+#youRank{
+    font-size:1.29vw;
+    font-weight:400;
+}
+
+#youHPBorder{
+    position:absolute;
+    left:3%;
+    top:11%;
+    width:20%;
+    border:0.11vw solid red;
+    height:3%;
+}
+#youHP{
+    position:absolute;
+    left:3%;
+    top:11%;
+    width:0%;
+    background-color:red;
+    height:calc(3% + 0.12vw);
+    transition:3s width;
+}
+#youEdge{
+    position:absolute;
+    left:24%;
+    top:11%;
+    color:red;
+    font-size:1.29vw;
+}
+#youMultiplier{
+    position:absolute;
+    left:3%;
+    top:16%;
+    font-size:1.29vw;
+}
+#youLuck{
+    position:absolute;
+    left:3%;
+    top:20%;
+    font-size:1.29vw;
+}
+#enemyName{
+    position:absolute;
+    right:3%;
+    top:3%;
+    font-size:2.35vw;
+    font-weight:700;
+}
+#enemyRank{
+    font-size:1.29vw;
+    font-weight:400;
+}
+#enemyHPBorder{
+    position:absolute;
+    right:3%;
+    top:11%;
+    width:20%;
+    border:0.11vw solid red;
+    height:3%;
+}
+#enemyHP{
+    position:absolute;
+    right:3%;
+    top:11%;
+    width:0%;
+    background-color:red;
+    height:calc(3% + 0.11vw);
+    transition:3s width;
+}
+#enemyEdge{
+    position:absolute;
+    right:24%;
+    top:11%;
+    color:red;
+    font-size:1.29vw;
+}
+#enemyMultiplier{
+    position:absolute;
+    right:3%;
+    top:16%;
+    font-size:1.29vw;
+}
+#enemyLuck{
+    position:absolute;
+    right:3%;
+    top:20%;
+    font-size:1.29vw;
+}
+#enemyThinking{
+    color:rgb(150,150,150);
+    position:absolute;
+    width:100%;
+    text-align:center;
+    left:0%;
+    top:50%;
+    font-size:1.47vw;
+    opacity:0;
+    transition:0.3s opacity;
+}
+#move{
+    position:absolute;
+    font-size:1.47vw;
+    width:100%;
+    text-align:center;
+    left:0%;
+    animation:up 4s forwards;
+}
+@keyframes up{
+    0%{top:65%;opacity:0;}
+    20%{opacity:1;}
+    50%{opacity:1;}
+    80%{opacity:0;}
+    100%{top:10%;opacity:0;}
+}
+.card{
+    position:absolute;
+    height:20%;
+    top:110%;
+    background-color:rgb(241,241,241);
+    width:30%;
+    border-radius:0.59vw;
+    font-family: "Instrument Sans", serif;
+    border:none;
+    transition:2s top, 0.2s transform;
+    border:1px solid rgb(230,230,230);
+}
+.card:hover{
+    transform:translateY(-1.47vw);
+    cursor:pointer;
+}
+.cardTitle{
+    position:absolute;
+    left:0%;
+    width:100%;
+    text-align:center;
+    top:20%;
+    font-size:1.76vw;
+    font-weight:700;
+}
+.cardDescription{
+    position:absolute;
+    left:10%;
+    width:80%;
+    text-align:center;
+    top:50%;
+    font-size:0.88vw;
+    color:rgb(100,100,100)
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes chill {
+    from {opacity: 1;}
+    to {opacity: 1;}
+}
+
+@keyframes fadeOut {
+    from {opacity: 1;}
+    to {opacity: 0;}
+}
+#canvas{
+    position:absolute;
+    left:0%;
+    top:0%;
+}
